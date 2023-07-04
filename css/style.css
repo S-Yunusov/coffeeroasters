@@ -2,6 +2,12 @@
 :root{
   --text-color: #333;
   --accent-color-green: #0a775f;
+  --accent-color-green-80: rgba(10, 119, 95, 0.8);
+  --accent-color-green-60: rgba(10, 119, 95, 0.6);
+  --accent-color-light-brown: #c99b67;
+  --accent-color-light-brown: rgba(201, 155, 103, 0.8);
+  --accent-color-light-brown: rgba(201, 155, 103, 0.6);
+  --light-brown: #f3d7b7;
   --outline-color:var(--accent-color-green)
 }
 
@@ -72,13 +78,48 @@ img{
 /* CONTAINER */
 .container{
   width: 100%;
-  width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+}
+.button-green {
+  background-color: var(--accent-color-green);
+  text-decoration: none;
+}
+.button-green:hover{
+  background-color: var(--accent-color-green-80)
+}
+.button-green:active{
+  background-color: var(--accent-color-green-60)
+}
+.button-brown {
+  background-color: var(--accent-color-light-brown);
+  text-decoration: none;
+}
+.button-brown:hover{
+  background-color: var(--accent-color-light-brown-80)
+}
+.button-brown:active{
+  background-color: var(--accent-color-light-brown-60)
+}
 
 /* MAIN-CONTENT */
 .main-content{
@@ -88,6 +129,7 @@ img{
 
 /* SITE-HEADER-INTRO-WRAPPER */
 .site-header-hero-wrapper{
+  background-color: var(--light-brown);
   background-image: url(../img/site-header-intro-bg.jpg);
 }
 
@@ -103,6 +145,7 @@ img{
   padding-right: 50px;
 }
 .site-header-logo {
+  flex-shrink: 0;
   display: flex;
   text-decoration: none;
 }
@@ -138,6 +181,7 @@ img{
   line-height: normal;
   color: var(--text-color);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .sitenav-link:hover{
   color: var(--accent-color-green);
@@ -147,6 +191,47 @@ img{
 }
 
 
+/* HERO */
+
+.hero {
+}
+.hero-container {
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+.hero-info-wrapper {
+  width: 100%;
+  max-width: 730px;
+  padding-top: 116px;
+  padding-bottom: 100px; 
+  padding-left: 150px;
+  padding-right: 116px;
+}
+.hero-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 64px;
+  line-height: normal;
+  color: #000;
+}
+.hero-text {
+  margin-top: 0;
+  line-height: 1.5;
+  color: #000;
+}
+.hero-text:not(:last-child){
+  margin-bottom: 34px;
+}
+
+.hero-img {
+  width: 710px;
+  height: 596px;
+  object-fit: cover;
+}
+.hero-img-index{
+  height: 696px;
+}
 
 
 /* RETINA-BG */
